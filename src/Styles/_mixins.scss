@@ -1,0 +1,57 @@
+@use 'variables' as *;
+
+/* Mixin for responsive breakpoints */
+
+@mixin breakpoint($breakpoint) {
+	@media (max-width: map-get($breakpoints, $breakpoint)) {
+		@content;
+	}
+}
+
+/* Mixin for focus styling */
+
+@mixin focus-styling($color) {
+	outline: 2px solid $color;
+	outline-offset: 4px;
+}
+
+/* Mixin for hover effects */
+
+@mixin hover {
+	@media (-ms-high-contrast: none),
+		(-ms-high-contrast: active),
+		(-moz-touch-enabled: 0),
+		(hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+/* Mixin Typographies */
+
+@mixin HeadingL {
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 48px;
+}
+
+@mixin HeadingM {
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 48px;
+	letter-spacing: 2px;
+}
+
+@mixin HeadingS {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 26px;
+	letter-spacing: 5px;
+}
+
+@mixin Body {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+}
