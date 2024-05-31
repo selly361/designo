@@ -1,0 +1,51 @@
+@use '@/Styles/index.scss' as *;
+
+.header {
+	width: 100%;
+	background-color: white;
+	padding: 64px 80px 0 80px;
+
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	&__logoLink {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
+
+	&__logo {
+		cursor: pointer;
+	}
+
+	&__nav {
+		display: flex;
+	}
+
+	&__navList {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		gap: 42px;
+	}
+
+	&__navLink {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 14px;
+		letter-spacing: 2px;
+		color: #333136;
+		text-decoration: none;
+
+		@include hover {
+            text-decoration: underline;
+        }
+	}
+}
