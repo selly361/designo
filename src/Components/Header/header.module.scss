@@ -37,15 +37,10 @@
 	}
 
 	&__navLink {
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 14px;
-		letter-spacing: 2px;
 		color: #333136;
-		text-decoration: none;
 
 		@include hover {
-            text-decoration: underline;
-        }
+			text-decoration: underline;
+		}
 	}
 }
