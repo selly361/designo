@@ -1,0 +1,90 @@
+@use '@/Styles/index.scss' as *;
+
+.home__hero {
+	width: 100%;
+	height: 640px;
+	border-radius: 15px;
+	background: $peach;
+	background-image: url('/images/home/desktop/bg-pattern-hero-home.svg');
+	background-repeat: no-repeat;
+	background-position: right;
+	padding: 145px 95px;
+	position: relative;
+
+	&__article {
+		width: 100%;
+		max-width: 540px;
+		height: 350px;
+		color: #ffffff;
+
+		&__title {
+			font-weight: 500;
+			font-size: 48px;
+			line-height: 48px;
+			margin-bottom: 31px;
+		}
+
+		&__description {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 26px;
+			margin-bottom: 40px;
+		}
+
+		&__button {
+			background: #ffffff;
+			font-size: 15px;
+			line-height: 22px;
+			letter-spacing: 1px;
+			color: #333136;
+			transition: 0.5s ease background;
+
+			@include hover {
+				background-color: $light-peach;
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+		right: 96px;
+		bottom: 0;
+		object-fit: cover;
+	}
+}
+
+.home__cards-section {
+	height: 412px;
+	width: 100%;
+	display: flex;
+	gap: 30px;
+	justify-content: space-between;
+
+
+	&__card {
+		width: 350px;
+		height: 412px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+
+		&__title {
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 26px;
+			text-align: center;
+			letter-spacing: 5px;
+			color: #333136;
+			margin: 48px 0 32px 0;
+		}
+
+		&__description {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 26px;
+			text-align: center;
+			color: #333136;
+		}
+	}
+}
