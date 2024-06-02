@@ -30,6 +30,39 @@ main {
 	gap: 160px;
 }
 
+.main--home-page, .main--about-page {
+	position: relative;
+
+
+	&::before {
+        content: '';
+        position: absolute;
+		top: 384px;
+		left: 0;
+		width: calc(100vw - 434px);
+        height: 594px;
+	    background: url('/images/shared/bg-pattern-leaf.svg') no-repeat;
+        background-size: contain;
+        background-position: left;
+		z-index: -1;
+
+    }
+
+	&::after {
+        content: '';
+        position: absolute;
+		transform: rotate(180deg);
+		bottom: -302px;
+		right: 0;
+		width: calc(100vw - 434px);
+        height: 594px;
+	    background: url('/images/shared/bg-pattern-leaf.svg') no-repeat;
+        background-size: contain;
+        background-position: left;
+		z-index: -1;
+    }
+}
+
 ul,
 ol {
 	list-style: none;
@@ -44,6 +77,20 @@ fieldset {
 
 button {
 	cursor: pointer;
+	width: 152px;
+	height: 56px;
+	border-radius: 8px;
+	font-weight: 500;
+	display: grid;
+	place-items: center;
+}
+
+a {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 2px;
+	text-decoration: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
