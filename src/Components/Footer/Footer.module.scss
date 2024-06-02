@@ -1,0 +1,142 @@
+@use '@/Styles/index.scss' as *;
+
+.footer-container {
+	height: 541px;
+	width: 100%;
+	position: relative;
+	margin-top: 160px;
+	display: flex;
+	align-items: end;
+
+	&__call-to-action {
+		padding: 64px 80px 72px 80px;
+		width: calc(100% - 160px);
+		height: 292px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		top: -100px;
+		background-color: $peach;
+		background-image: url('/images/shared/bg-pattern-call-to-action.svg');
+		background-position: right;
+		background-repeat: no-repeat;
+		border-radius: 15px;
+		position: absolute;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&__container {
+			max-width: 459px;
+			height: max-content;
+			display: flex;
+			flex-direction: column;
+			gap: 18px;
+			color: #ffffff;
+
+			&__title {
+				font-weight: 500;
+				font-size: 40px;
+				line-height: 40px;
+			}
+
+			&__description {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 26px;
+			}
+		}
+
+		button {
+			background-color: #ffffff;
+			transition: 0.5s ease background;
+
+			@include hover {
+				background-color: $light-peach;
+			}
+		}
+	}
+
+	&__footer {
+		background: #1d1c1e;
+		width: 100%;
+		padding: 144px 80px 72px 80px;
+
+		&__nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: 40px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+			ul {
+				display: flex;
+				gap: 42px;
+
+				a {
+					color: #ffffff;
+					text-decoration: none;
+
+					@include hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		&__info {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 40px;
+			color: #ffffff;
+
+			&__address,
+			&__contact {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				align-items: start;
+
+				p {
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 26px;
+					color: rgba(255, 255, 255, 0.5);
+				}
+			}
+
+			&__address p:first-child,
+			&__contact p {
+				font-weight: 500;
+			}
+
+			&__social {
+				display: flex;
+				flex-direction: row;
+				align-items: end;
+				gap: 20px;
+
+				svg {
+					path {
+						transition: 0.5s ease fill;
+
+						@include hover {
+							fill: $light-peach;
+						}
+					}
+				}
+
+				a {
+					color: #ffffff;
+					font-size: 24px;
+					height: max-content;
+
+					@include hover {
+						color: $peach;
+					}
+				}
+			}
+		}
+	}
+}
